@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCard QR Generator</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>VCard QR Generator</h1>
+        <p>Create a professional contact QR code instantly.</p>
+    </div>
+
+    <div class="main">
+
+        <div class="card form-card">
+
+            <h2>Contact Information</h2>
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name">
+            </div>
+
+            <div class="form-group">
+                <label>Designation</label>
+                <input type="text" id="designation" placeholder="Enter Designation">
+            </div>
+
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" id="company" placeholder="Enter Company Name">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter Phone Number">
+            </div>
+
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" id="email" placeholder="Enter Email Address">
+            </div>
+
+            <div class="form-group">
+                <label>Website Link</label>
+                <input type="url" id="website" placeholder="https://example.com">
+            </div>
+
+            <button class="btn generate-btn" onclick="generateQR()">
+                Generate QR Code
+            </button>
+
+        </div>
+
+        <div class="card qr-card">
+
+            <h2>Generated QR</h2>
+
+            <div id="qrcode"></div>
+
+            <div class="placeholder" id="placeholder">
+                Your QR Code will appear here after generation.
+            </div>
+
+            <div class="success" id="successMsg">
+                ✅ QR Code generated successfully
+            </div>
+
+            <button
+                id="downloadBtn"
+                class="btn download-btn"
+                onclick="downloadQR()">
+                Download QR
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Designed & Developed by
+        <a href="https://github.com/KomalSBabar"
+           target="_blank">
+           Komal Babar
+        </a>
+    </footer>
+
+</div>
+
+</body>
+</html>
